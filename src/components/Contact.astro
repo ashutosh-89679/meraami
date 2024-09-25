@@ -3,39 +3,40 @@ import Container from "./Container.astro"
 import Topic from "./Topic.astro";
 ---
 <Container>
-<div class="relative flex flex-col items-center md:flex-row">
+<div id="contact" class="relative flex flex-col items-center md:flex-row">
     <Topic title="Contact" description="Connect with Us: Let's Discuss Your Digital Marketing Needs" />
 </div>
 
 <div class="relative flex flex-col items-center md:flex-row my-6 bg-zinc-100 rounded-[45px]">
     <div class="row items-center py-12 px-4 md:px-20 md:w-8/12 md:py-10">
-        <form action="#" class="space-y-8 md:w-full">
+       <form id="contactForm" class="space-y-8 md:w-full">
             <div class="flex">
                 <div class="flex items-center me-4">
-                    <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime">
-                    <label for="inline-radio" class="ms-2 text-base font-medium text-black">Say Hi</label>
+                    <input id="say-hi" type="radio" value="Say Hi" name="purpose" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime" required>
+                    <label for="say-hi" class="ms-2 text-base font-medium text-black">Say Hi</label>
                 </div>
                 <div class="flex items-center me-4 mx-8 md:mx-20">
-                    <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime">
-                    <label for="inline-2-radio" class="ms-2 text-base font-medium text-black">Get a Quote</label>
+                    <input id="quote" type="radio" value="Get a Quote" name="purpose" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime" required>
+                    <label for="quote" class="ms-2 text-base font-medium text-black">Get a Quote</label>
                 </div>
             </div>
             <div>
-                <label for="email" class="block mb-2 text-base font-medium text-black">Name</label>
-                <input type="email" id="email" class="shadow-sm bg-white border text-black text-base rounded-lg focus:ring-black focus:border-black block w-full p-2.5" placeholder="Name" required>
+                <label for="name" class="block mb-2 text-base font-medium text-black">Name</label>
+                <input type="text" id="name" name="name" class="shadow-sm bg-white border text-black text-base rounded-lg focus:ring-black focus:border-black block w-full p-2.5" placeholder="Name" required>
             </div>
             <div>
-                <label for="subject" class="block mb-2 text-base font-medium text-black">Email</label>
-                <input type="text" id="subject" class="block p-3 w-full text-base text-black bg-white rounded-lg border shadow-sm focus:ring-black focus:border-black" placeholder="Email" required>
+                <label for="email" class="block mb-2 text-base font-medium text-black">Email</label>
+                <input type="email" id="email" name="email" class="block p-3 w-full text-base text-black bg-white rounded-lg border shadow-sm focus:ring-black focus:border-black" placeholder="Email" required>
             </div>
             <div class="sm:col-span-2">
-                <label for="message" class="block mb-2 text-base font-medium text-black dark:text-gray-400">Message</label>
-                <textarea id="message" rows="6" class="block p-2.5 w-full text-base text-black bg-white rounded-lg shadow-sm border focus:ring-black focus:border-black" placeholder="Message"></textarea>
+                <label for="message" class="block mb-2 text-base font-medium text-black">Message</label>
+                <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-base text-black bg-white rounded-lg shadow-sm border focus:ring-black focus:border-black" placeholder="Message" required></textarea>
             </div>
-            <button type="submit" class="w-full py-5 bg-zinc-900 rounded-[14px] justify-center gap-2.5 inline-flex">
-                <div class="text-center text-white text-xl font-normal leading-7">Send Message</div>
-            </button>
-        </form>
+            <button type="submit" id="submitBtn" class="w-full py-5 bg-zinc-900 rounded-[14px] justify-center gap-2.5 inline-flex">
+                    <div class="text-center text-white text-xl font-normal leading-7">Send Message</div>
+                </button>
+    </form>
+
     </div>
     <div class="hidden md:grid md:justify-items-end md:w-4/12 md:py-2">
         <img src="./clients/contact.svg" alt="c" width="80%">
@@ -43,3 +44,51 @@ import Topic from "./Topic.astro";
 </div>
 
 </Container>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.3.1/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init("33o-Q06hqvJBoZxw6"); // Your User ID
+    })();
+</script>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        // Collect form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const purpose = document.querySelector('input[name="purpose"]:checked')?.value;
+
+        // Check if all fields are filled
+        if (!name || !email || !message || !purpose) {
+            alert('Please fill all fields.');
+            return;
+        }
+
+        // Prepare email data
+        const emailData = {
+            service_id: "service_7up0d4t", // Your Service ID
+            template_id: "template_qflvhoo", // Your Template ID
+            user_id: "33o-Q06hqvJBoZxw6", // Your User ID
+            template_params: {
+                to_name: "meraami team",
+                from_name: name,
+                message: message,
+                reply_to: email,
+            }
+        };
+
+        // Send email using EmailJS
+        emailjs.send(emailData.service_id, emailData.template_id, emailData.template_params, emailData.user_id)
+            .then(function(response) {
+                alert('Thank you for your message. We will get back to you soon!');
+                console.log('Success!', response.status, response.text);
+            }, function(error) {
+                alert('We will get back to you soon!');
+                console.log('Failed...', error);
+            });
+    });
+</script>
