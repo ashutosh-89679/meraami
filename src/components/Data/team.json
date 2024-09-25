@@ -28,33 +28,74 @@
     [
         {
             "index": 1,
-            "label": "Consultation",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
+            "label": "SEO and Content Marketing",
+            "content": "Our SEO strategies are designed to boost your website's visibility on search engines, while our content marketing efforts ensure that your audience stays engaged. We use data-driven insights to create content that resonates with your target audience and helps improve your search rankings."
         },
         {
             "index": 2,
-            "label": "Research",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
+            "label": "Social Media Marketing",
+            "content": "Social media is where your brand’s personality shines. We manage your social media presence across platforms, crafting content that fosters engagement and builds a loyal following. From strategic planning to execution, we handle it all, ensuring your brand stays top of mind."
         },
         {
             "index": 3,
-            "label": "Implementation",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
+            "label": "Digital Advertising",
+            "content": "Maximize your marketing budget with targeted digital advertising. Whether it’s PPC, display ads, or social media advertising, we ensure your ads reach the right audience, driving higher conversion rates and a better return on investment."
         },
         {
             "index": 4,
-            "label": "Optimization",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
+            "label": "Email Marketing",
+            "content": "Stay connected with your audience through personalized email campaigns that drive engagement and conversions. We craft compelling email content and design that keeps your audience informed and interested."
         },
         {
             "index": 5,
-            "label": "Reporting",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
+            "label": "Pay-Per-Click (PPC) Advertising",
+            "content": "Get instant visibility and results with our PPC campaigns. We create and manage pay-per-click advertising that drives targeted traffic to your site, increasing conversions and maximizing ROI."
         },
         {
             "index": 6,
-            "label": "Improvement",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
+            "label": "Content Creation",
+            "content": "From blog posts to videos, our content creation services are designed to tell your brand’s story in a way that captivates your audience. We focus on creating content that is not only engaging but also aligned with your brand’s voice and goals."
+        },
+        {
+            "index": 7,
+            "label": "Analytics and Reporting",
+            "content": "We believe in the power of data. Our analytics and reporting services provide you with detailed insights into your digital marketing performance, helping you make informed decisions and refine your strategy for better results."
+        },
+        {
+            "index": 8,
+            "label": "Online Reputation Management",
+            "content": "Your brand’s online reputation is crucial. We offer reputation management services to ensure that your brand is viewed positively by your audience. From monitoring online mentions to managing reviews, we help you maintain a strong, positive image."
+        },
+        {
+            "index": 9,
+            "label": "Conversion Rate Optimization (CRO)",
+            "content": "Turn more visitors into customers with our CRO services. We analyze user behavior on your website and make data-driven recommendations to improve the user experience and increase conversion rates."
+        },
+        {
+            "index": 10,
+            "label": "Influencer Marketing",
+            "content": "Leverage the power of influencers to boost your brand’s reach. We connect you with the right influencers in your industry, creating authentic partnerships that enhance your brand’s credibility and expand your audience."
+        },
+        {
+            "index": 11,
+            "label": "Brand Strategy and Identity",
+            "content": "Your brand is your identity. We help you create a cohesive brand strategy that defines who you are and how you communicate with your audience. From logo design to brand messaging, we ensure your brand stands out in a crowded market."
+        },
+        {
+            "index": 12,
+            "label": "Local SEO",
+            "content": "Reach your local audience more effectively with our local SEO services. We optimize your online presence to ensure you appear in local searches, making it easier for customers in your area to find and choose your business."
+        },
+        {
+            "index": 13,
+            "label": "Public Relations",
+            "content": "Boost your brand’s image with our PR services. We craft engaging stories and manage media relations to enhance your reputation and connect with your audience effectively."
+        },
+        {
+            "index": 14,
+            "label": "Web Designing",
+            "content": "Elevate your online presence with our web designing services. We create visually appealing and user-friendly websites that reflect your brand and drive engagement."
         }
     ]
+    
 }
